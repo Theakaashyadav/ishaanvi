@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us - Ishaanvi Interior</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -163,7 +164,52 @@ body {
     width: 100%;
   }
 }
+@media (max-width: 768px) {
 
+  .hero {
+    padding: 60px 15px; /* less spacing */
+  }
+
+  .hero h1 {
+    font-size: 28px; /* smaller heading */
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .section {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 40px 15px; /* FIX: reduce big desktop padding */
+    gap: 25px; /* tighter spacing */
+  }
+
+  .section img,
+  .text {
+    width: 100%;
+  }
+
+  .text h2 {
+    font-size: 22px; /* better for mobile */
+  }
+
+  .text p {
+    font-size: 14px;
+    text-align: left; /* better readability on mobile */
+  }
+
+  .team {
+    padding: 40px 15px;
+  }
+
+  .member {
+    width: 100%; /* FIX: full width cards */
+    max-width: 300px;
+    margin: auto;
+  }
+
+}
 </style>
 </head>
 
