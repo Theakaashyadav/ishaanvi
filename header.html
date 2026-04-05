@@ -46,50 +46,77 @@
     gap: 15px;
     flex-wrap: wrap;
     border-bottom: 1px solid var(--border-light);
+    text-align: center; /* ✅ ensures proper wrapping */
 }
 
 /* TEXT */
 .top-bar span{
-    text-align: center;
     font-weight: 500;
     color: var(--text-muted);
+    display: inline-flex; /* ✅ better alignment with icons */
+    align-items: center;
+    gap: 5px;
 }
 
 /* ICONS */
 .top-bar i{
-    margin-left: 5px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-/* ICON HOVER (Luxury Gold Glow) */
+/* ICON HOVER */
 .top-bar i:hover{
     color: var(--primary);
     text-shadow: 0 0 10px rgba(212,175,55,0.7);
 }
 
-/* Highlight text */
+/* Highlight */
 .top-bar span strong {
     color: var(--primary);
 }
 
-/* MOBILE */
-@media (max-width:600px){
+/* ========================= */
+/* 📱 TABLET */
+/* ========================= */
+@media (max-width: 768px){
     .top-bar {
-        font-size: 12px;
-        padding: 6px 8px;
-        gap: 6px;
-    }
-
-    .top-bar i {
-        margin-left: 3px;
-    }
-
-    .top-bar span {
-        font-size: 12px;
+        padding: 6px 12px;
+        gap: 10px;
+        font-size: 13px;
     }
 }
 
+/* ========================= */
+/* 📱 MOBILE */
+/* ========================= */
+@media (max-width:600px){
+    .top-bar {
+        flex-direction: column; /* ✅ stack items */
+        gap: 6px;
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .top-bar span {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* ========================= */
+/* 📱 SMALL MOBILE */
+/* ========================= */
+@media (max-width:400px){
+    .top-bar {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+    .top-bar span {
+        flex-direction: column; /* ✅ icon below text if needed */
+        gap: 2px;
+    }
+}
 
 
 
